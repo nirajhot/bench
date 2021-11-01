@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [testRig]">
+  <test thread-count="5" name="testRig App(failed)">
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="testCase.orderWithGuestUser">
+        <methods>
+          <include name="accountCreation" invocation-numbers="0"/>
+          <include name="successMsg"/>
+          <include name="payment"/>
+          <include name="browserSetUp"/>
+          <include name="processCheckOut" invocation-numbers="0"/>
+          <include name="quitBrowser"/>
+        </methods>
+      </class> <!-- testCase.orderWithGuestUser -->
+    </classes>
+  </test> <!-- testRig App(failed) -->
+</suite> <!-- Failed suite [testRig] -->

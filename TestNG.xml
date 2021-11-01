@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="testRig">
+	<!--  listeners>
+		<listener class-name="RetryAnalyzer.MyAnnotationTransfer">
+		</listener>
+	</listeners-->
+	<test name="testRig App">
+		<parameter name="browser" value="Chrome" />
+		<classes>
+			<class name="testCase.orderWithGuestUser" />
+		</classes>
+	</test>
+</suite>

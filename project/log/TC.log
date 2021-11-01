@@ -1,0 +1,11 @@
+2021-10-31 19:11:14  [utility.BaseClass] (main:) Chrome browser started
+2021-10-31 19:12:09  [utility.BaseClass] (main:) Application launched
+2021-10-31 19:12:09  [utility.BaseClass] (main:) Waiting for element with wait of 2000 ms
+2021-10-31 19:12:55  [utility.BaseClass] (main:) Waiting for element with wait of 4000 ms
+2021-10-31 19:13:31  [utility.BaseClass] (main:) Waiting for element with wait of 2000 ms
+2021-10-31 19:13:43  [utility.BaseClass] (main:) Waiting for element with wait of 4000 ms
+2021-10-31 19:14:01  [utility.BaseClass] (main:) Waiting for element with wait of 2000 ms
+2021-10-31 19:14:04  [utility.BaseClass] (main:) Waiting for element with wait of 2000 ms
+2021-10-31 19:14:06  [utility.BaseClass] (main:) Waiting for element with wait of 2000 ms
+2021-10-31 19:14:08  [utility.BaseClass] (main:) Waiting for element with wait of 2000 ms
+2021-10-31 19:16:17  [utility.BaseClass] (main:) Closing the browser

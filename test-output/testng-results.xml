@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="309207" started-at="2021-10-31T13:41:08Z" finished-at="2021-10-31T13:46:17Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="309207" started-at="2021-10-31T13:41:08Z" finished-at="2021-10-31T13:46:17Z">
+      <class name="testCase.orderMultipleItemsWithRegUser">
+        <test-method status="PASS" signature="getData()[pri:0, instance:testCase.orderMultipleItemsWithRegUser@2d928643]" name="getData" is-config="true" duration-ms="564" started-at="2021-10-31T13:41:08Z" finished-at="2021-10-31T13:41:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getData -->
+        <test-method status="PASS" signature="browserSetUp(java.lang.String)[pri:0, instance:testCase.orderMultipleItemsWithRegUser@2d928643]" name="browserSetUp" is-config="true" duration-ms="62168" started-at="2021-10-31T13:41:09Z" finished-at="2021-10-31T13:42:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserSetUp -->
+        <test-method status="PASS" signature="userLogin()[pri:0, instance:testCase.orderMultipleItemsWithRegUser@2d928643]" name="userLogin" duration-ms="43330" started-at="2021-10-31T13:42:11Z" finished-at="2021-10-31T13:42:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userLogin -->
+        <test-method status="PASS" signature="searchProduct()[pri:1, instance:testCase.orderMultipleItemsWithRegUser@2d928643]" name="searchProduct" duration-ms="80020" started-at="2021-10-31T13:42:54Z" finished-at="2021-10-31T13:44:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchProduct -->
+        <test-method status="PASS" signature="checkOut()[pri:2, instance:testCase.orderMultipleItemsWithRegUser@2d928643]" name="checkOut" duration-ms="122512" started-at="2021-10-31T13:44:15Z" finished-at="2021-10-31T13:46:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkOut -->
+        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:testCase.orderMultipleItemsWithRegUser@2d928643]" name="quitBrowser" is-config="true" duration-ms="439" started-at="2021-10-31T13:46:17Z" finished-at="2021-10-31T13:46:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitBrowser -->
+      </class> <!-- testCase.orderMultipleItemsWithRegUser -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
