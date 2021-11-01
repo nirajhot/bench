@@ -52,6 +52,12 @@ public class homePage extends BasePage{
 	@FindBy(css="[data-ui-id='message-success']")
 	private WebElement successMsg;
 	
+	@FindBy(css="[.page.messages .messages [data-ui-id='message-success'] div")
+	private WebElement successCartMsg;
+	
+	@FindBy(css="[data-ui-id='message-error']")
+	private WebElement successError;
+	
 	@FindBy(css=".product-item-link")
 	public List<WebElement> allItems;
 
@@ -317,7 +323,15 @@ public class homePage extends BasePage{
 		return successMsg;
 	}
 	
+	public WebElement getSuccessError() {
+		return successError;
+	}
+	
 	public WebElement getAms() {
 		return selectAmsterdom;
+	}
+	
+	public WebElement getSuccessCartMsg() {
+		return successCartMsg;
 	}
 }
