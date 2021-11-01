@@ -23,18 +23,10 @@ public class readData {
 	private static HSSFCell cell;
 
 	public void setExcelFile(String sheetName) throws IOException {
-		//Create an object of File class to open xls file
 		File file =    new File(constants.excelPath);
-
-		//Create an object of FileInputStream class to read excel file
 		FileInputStream inputStream = new FileInputStream(file);
-
-		//creating workbook instance that refers to .xls file
 		workbook=new HSSFWorkbook(inputStream);
-
-		//creating a Sheet object
 		sheet=workbook.getSheet(sheetName);
-
 	}
 
 	public String getCellData(int rowNumber,int cellNumber){
