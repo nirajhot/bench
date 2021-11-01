@@ -113,8 +113,6 @@ public class orderWithRegUser extends BaseClass{
 		hp.city().click();
 		hp.city().sendKeys("ABC");
 		bp.selectValue(hp.getState(), common.INDEX.toString(), "Alabama");
-		/*Select drpCountry = new Select(hp.getState());
-		drpCountry.selectByVisibleText("Alabama");*/
 		hp.ZIP().click();
 		hp.ZIP().sendKeys("12345");
 		hp.CONTACT().click();
@@ -129,8 +127,6 @@ public class orderWithRegUser extends BaseClass{
 	@Test(priority=5)
 	public void successMsg(){
 		Assert.assertTrue(SuccessPT.equalsIgnoreCase(driver.getTitle()));
-		//Assert.assertEquals(hp.customerLoginText().getText(), "Thank you for your purchase!");
-		waitFor(10000);
+		waitFor(1000);
 	}
-
 }

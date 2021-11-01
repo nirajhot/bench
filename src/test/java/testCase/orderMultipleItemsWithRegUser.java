@@ -116,4 +116,33 @@ public class orderMultipleItemsWithRegUser extends BaseClass{
 		hp.checkOut().click();
 		Assert.assertTrue(CheckPT.equalsIgnoreCase(driver.getTitle()));
 	}
+	
+	@Test(priority=3)
+	public void payment(){
+		bp.waitUntilElementClickable(hp.paymentMethod());
+		bp.waitUntilElementClickable(hp.getOrderSummary());
+		hp.COD().click();
+		bp.waitUntilElementClickable(hp.address());
+		waitFor(5000);
+		hp.streetAddress().click();
+		hp.streetAddress().sendKeys("ABC");
+		hp.city().click();
+		hp.city().sendKeys("ABC");
+		bp.selectValue(hp.getState(), common.INDEX.toString(), "Alabama");
+		hp.ZIP().click();
+		hp.ZIP().sendKeys("12345");
+		hp.CONTACT().click();
+		hp.CONTACT().sendKeys("3210456987");
+		hp.getUpdate().click();
+		boolean status = hp.placeOrder().isEnabled();
+		if(status){
+			hp.placeOrder().click();
+		}
+	}
+
+	@Test(priority=4)
+	public void successMsg(){
+		Assert.assertTrue(SuccessPT.equalsIgnoreCase(driver.getTitle()));
+		waitFor(1000);
+	}
 }

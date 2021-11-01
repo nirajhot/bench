@@ -8,6 +8,7 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pageObject.homePage;
+import setEnum.common;
 import utility.BaseClass;
 import utility.BasePage;
 import utility.Config;
@@ -141,8 +142,7 @@ public class orderWithGuestUser extends BaseClass{
 		hp.streetAddress().sendKeys("ABC");
 		hp.city().click();
 		hp.city().sendKeys("ABC");
-		Select drpCountry = new Select(hp.getState());
-		drpCountry.selectByVisibleText("Alabama");
+		bp.selectValue(hp.getState(), common.INDEX.toString(), "Alabama");
 		hp.ZIP().click();
 		hp.ZIP().sendKeys("12345");
 		hp.CONTACT().click();
@@ -157,8 +157,7 @@ public class orderWithGuestUser extends BaseClass{
 	@Test(priority=5)
 	public void successMsg(){
 		Assert.assertTrue(SuccessPT.equalsIgnoreCase(driver.getTitle()));
-		//Assert.assertEquals(hp.customerLoginText().getText(), "Thank you for your purchase!");
-		waitFor(10000);
+		waitFor(1000);
 	}
 
 }
