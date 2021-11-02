@@ -1,6 +1,7 @@
 package testCase;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
@@ -30,21 +31,21 @@ public class orderWithGuestUser extends BaseClass{
 	@DataProvider(name = "test-data")
 	public Object[][] dataProvFunc(){
 		return new Object[][]{
-			{"Test"}
+			{"glasses"}
 		};
 	}
 
 	@DataProvider(name = "test-test-data")
 	public Object[][] dataProvFuncTest(){
 		return new Object[][]{
-			{"Test Product"}
+			{"Alcogel Clean Machines","CPW1020A"}
 		};
 	}
 
 	@DataProvider(name = "select-test-data")
 	public Object[][] dataProvSelect(){
 		return new Object[][]{
-			{"skrmte@readyh.site", "Manoj", "Sharma"}
+			{"bovecay785@datakop.com", "Manoj", "Sharma"}
 		};
 	}
 
@@ -55,15 +56,28 @@ public class orderWithGuestUser extends BaseClass{
 		a1= new Actions(driver);
 		Assert.assertTrue(LPT.equalsIgnoreCase(driver.getTitle()));
 		bp.waitUntilElementClickable(hp.banner());
-		hp.searchTextBar().sendKeys(keyWord);
+		try {
+			hp.searchTextBar().clear();
+			hp.searchTextBar().sendKeys(keyWord);
+			waitFor(4000);
+			hp.searchTextBar().sendKeys(Keys.ENTER);
+		}
+		catch(org.openqa.selenium.StaleElementReferenceException ex)
+		{
+			hp.searchTextBar().clear();
+			hp.searchTextBar().sendKeys(keyWord);
+			waitFor(4000);
+			hp.searchTextBar().sendKeys(Keys.ENTER);
+		}
+		/*hp.searchTextBar().sendKeys(keyWord);
 		waitFor(4000);
 		a1.moveToElement(hp.getFirst()).build().perform();
-		hp.getFirst().click();
+		hp.getFirst().click();*/
 		bp.waitUntilElementClickable(hp.productGridWrapper());
 	}
 
 	@Test(priority=1,dataProvider ="test-test-data")
-	public void clickItemAddCart(String keyWord){
+	public void clickItemAddCart(String keyWord, String SKU){
 		for(int i=0;i<hp.getAllItems().size();i++){
 			WebElement selectPrice =hp.getAllItems().get(i);
 			try{
@@ -71,7 +85,7 @@ public class orderWithGuestUser extends BaseClass{
 					a1.moveToElement(driver.findElement(By.cssSelector("[alt='"+keyWord+"']")))
 					.build().perform();
 					waitFor(2000);
-					driver.findElement(By.cssSelector("[data-product-sku='"+keyWord+"']"+" .tocart.primary")).click();;
+					driver.findElement(By.cssSelector("[data-product-sku='"+SKU+"']"+" .tocart.primary")).click();;
 					bp.waitUntilElementClickable(hp.getMagnifier());
 				}
 			}catch(Exception e){
@@ -81,8 +95,9 @@ public class orderWithGuestUser extends BaseClass{
 	}
 
 	@Test(priority=2,dataProvider ="test-test-data")
-	public void processCheckOut(String keyWord){
-		Assert.assertTrue("Test Product | BENCH/ Online Store".equalsIgnoreCase(driver.getTitle()));
+	public void processCheckOut(String keyWord, String SKU){
+		String title = keyWord+" | BENCH/ Online Store";
+		Assert.assertTrue(title.equalsIgnoreCase(driver.getTitle()));
 		if(hp.customerLoginText().getText().equals(keyWord)){
 			hp.selectWhite().click();
 			hp.setQTY().click();
@@ -92,7 +107,6 @@ public class orderWithGuestUser extends BaseClass{
 			waitFor(5000);
 			try{
 				String getText = hp.cartAddedText().getText();
-				System.out.println(getText);
 				if(getText.equals("shopping cart")){
 					bp.waitUntilElementClickable(hp.getCartDetail());
 					hp.getCartDetail().click();

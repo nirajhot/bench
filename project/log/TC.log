@@ -1,11 +1,10 @@
-2021-10-31 19:11:14  [utility.BaseClass] (main:) Chrome browser started
-2021-10-31 19:12:09  [utility.BaseClass] (main:) Application launched
-2021-10-31 19:12:09  [utility.BaseClass] (main:) Waiting for element with wait of 2000 ms
-2021-10-31 19:12:55  [utility.BaseClass] (main:) Waiting for element with wait of 4000 ms
-2021-10-31 19:13:31  [utility.BaseClass] (main:) Waiting for element with wait of 2000 ms
-2021-10-31 19:13:43  [utility.BaseClass] (main:) Waiting for element with wait of 4000 ms
-2021-10-31 19:14:01  [utility.BaseClass] (main:) Waiting for element with wait of 2000 ms
-2021-10-31 19:14:04  [utility.BaseClass] (main:) Waiting for element with wait of 2000 ms
-2021-10-31 19:14:06  [utility.BaseClass] (main:) Waiting for element with wait of 2000 ms
-2021-10-31 19:14:08  [utility.BaseClass] (main:) Waiting for element with wait of 2000 ms
-2021-10-31 19:16:17  [utility.BaseClass] (main:) Closing the browser
+2021-11-02 23:34:19  [utility.BaseClass] (TestNG-tests-2:) Chrome browser started
+2021-11-02 23:34:19  [utility.BaseClass] (TestNG-tests-1:) Chrome browser started
+2021-11-02 23:34:19  [utility.BaseClass] (TestNG-tests-3:) Chrome browser started
+2021-11-02 23:37:22  [utility.BaseClass] (TestNG-tests-2:) Application launched
+2021-11-02 23:37:22  [utility.BaseClass] (TestNG-tests-2:) Waiting for element with wait of 2000 ms
+2021-11-02 23:37:25  [utility.BaseClass] (TestNG-tests-1:) Application launched
+2021-11-02 23:37:25  [utility.BaseClass] (TestNG-tests-1:) Waiting for element with wait of 2000 ms
+2021-11-02 23:37:27  [utility.BaseClass] (TestNG-tests-2:) Waiting for element with wait of 4000 ms
+2021-11-02 23:39:07  [utility.BaseClass] (TestNG-tests-3:) Application launched
+2021-11-02 23:39:07  [utility.BaseClass] (TestNG-tests-3:) Waiting for element with wait of 2000 ms

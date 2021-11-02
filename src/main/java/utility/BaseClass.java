@@ -40,10 +40,6 @@ public class BaseClass extends Initializer{
 		DOMConfigurator.configure("log4j.xml");
 		if(browser.equalsIgnoreCase("Chrome")){
 			manager.chromedriver().setup();
-			ChromeOptions options = new ChromeOptions();
-			options.addArguments("start-maximized");
-			options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
-			options.setExperimentalOption("useAutomationExtension", false);
 			driver = new ChromeDriver();
 		}else if(browser.equalsIgnoreCase("firefox")){
 			manager.firefoxdriver().setup();
