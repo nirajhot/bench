@@ -29,7 +29,6 @@ public class orderMultipleItemsWithRegUser extends BaseClass{
 	private static String SuccessPT = rc.getSuccessPT();
 	private static String EMAIL = rc.getEmail();
 	private static String PASS = rc.getPass();
-	JavascriptExecutor js;
 	
 	@BeforeTest
 	public void getData() throws IOException{

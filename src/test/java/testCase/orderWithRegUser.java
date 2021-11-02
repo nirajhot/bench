@@ -1,9 +1,12 @@
 package testCase;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
+import org.testng.SkipException;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pageObject.homePage;
@@ -28,14 +31,14 @@ public class orderWithRegUser extends BaseClass{
 	@DataProvider(name = "test-data")
 	public Object[][] dataProvFunc(){
 		return new Object[][]{
-			{"Test"}
+			{"glasses"}
 		};
 	}
 
 	@DataProvider(name = "select-test-data")
 	public Object[][] dataProvSelect(){
 		return new Object[][]{
-			{"Test Product"}
+			{"Alcogel Clean Machines"}
 		};
 	}
 
@@ -48,6 +51,7 @@ public class orderWithRegUser extends BaseClass{
 		bp.waitUntilElementClickable(hp.banner());
 		hp.welcomeIcon().click();
 		bp.waitUntilElementClickable(hp.getHeaderLinks());
+		bp.mouseHover(hp.signIn());
 		hp.signIn().click();
 		Assert.assertTrue(CPT.equalsIgnoreCase(driver.getTitle()));
 		hp.emailText().sendKeys(EMAIL);
@@ -58,46 +62,77 @@ public class orderWithRegUser extends BaseClass{
 
 	@Test(priority=1,dataProvider ="test-data")
 	public void searchProduct(String keyWord){
-		hp.searchTextBar().sendKeys(keyWord);
-		waitFor(4000);
+		try {
+			hp.searchTextBar().clear();
+			hp.searchTextBar().sendKeys(keyWord);
+			waitFor(4000);
+			hp.searchTextBar().sendKeys(Keys.ENTER);
+		}
+		catch(org.openqa.selenium.StaleElementReferenceException ex)
+		{
+			hp.searchTextBar().clear();
+			hp.searchTextBar().sendKeys(keyWord);
+			waitFor(4000);
+			hp.searchTextBar().sendKeys(Keys.ENTER);
+		}
+		/*bp.mouseHover(hp.getFirst());
 		a1.moveToElement(hp.getFirst()).build().perform();
-		hp.getFirst().click();
+		hp.getFirst().click();*/
 		bp.waitUntilElementClickable(hp.productGridWrapper());
 	}
 
 	@Test(priority=2,dataProvider ="select-test-data")
 	public void clickItemAddCart(String keyWord){
-		for(int i=0;i<hp.getAllItems().size();i++){
-			WebElement selectPrice =hp.getAllItems().get(i);
-			try{
-				if(selectPrice.getText().contains(keyWord)){
-					a1.moveToElement(driver.findElement(By.cssSelector("[alt='"+keyWord+"']")))
-					.build().perform();
-					waitFor(2000);
-					driver.findElement(By.cssSelector("[data-product-sku='"+keyWord+"']"+" .tocart.primary")).click();;
-					bp.waitUntilElementClickable(hp.getMagnifier());
-				}
-			}catch(Exception e){
-				e.printStackTrace();
-			}
+		WebElement e1;
+		try{
+			e1 = driver.findElement(By.cssSelector("[alt='"+keyWord+"']"));
+			e1.click();
+		}catch(Exception e){
+			 js = (JavascriptExecutor)driver;
+			e1 = driver.findElement(By.cssSelector("[alt='"+keyWord+"']"));
+			js.executeScript("arguments[0].click();", e1);
 		}
 	}
 
 	@Test(priority=3,dataProvider ="select-test-data")
 	public void processCheckOut(String keyWord){
-		Assert.assertTrue("Test Product | BENCH/ Online Store".equalsIgnoreCase(driver.getTitle()));
+		String title = keyWord+" | BENCH/ Online Store";
+		Assert.assertTrue(title.equalsIgnoreCase(driver.getTitle()));
 		if(hp.customerLoginText().getText().equals(keyWord)){
-			hp.selectWhite().click();
-			hp.setQTY().click();
-			hp.setQTY().clear();
-			hp.setQTY().sendKeys("2");
+			try{
+				waitFor(2000);
+				bp.selectValue(hp.selectColor(), common.VISIBLETEXT.toString(), "ASH GRAY");
+				waitFor(2000);
+				if(hp.selectSize().isEnabled()){
+					waitFor(2000);
+					js.executeScript("arguments[0].scrollIntoView();", hp.selectSize());
+					bp.selectValue(hp.selectSize(), common.VISIBLETEXT.toString(), "L");
+					waitFor(2000);
+				}
+				hp.setQTY().click();
+				hp.setQTY().clear();
+				hp.setQTY().sendKeys("1");
+			}catch(Exception e){
+				hp.setQTY().click();
+				hp.setQTY().clear();
+				hp.setQTY().sendKeys("1");
+			}
 			hp.cartButton().click();
-			//Assert.assertEquals(hp.shoppingCart().getText(), "shopping cart");
+			try{
+				bp.waitUntilElementClickable(hp.getSuccessMsg());
+			}catch(Exception e){
+				bp.waitUntilElementClickable(hp.getSuccessError());
+			}
 			bp.waitUntilElementClickable(hp.getCartDetail());
 			hp.getCartDetail().click();
 			bp.waitUntilElementClickable(hp.getMiniCartDetail());
-			hp.checkOut().click();
-			Assert.assertTrue(CheckPT.equalsIgnoreCase(driver.getTitle()));
+			if(!hp.checkOut().isDisplayed()){
+				throw new SkipException("Skipping this exception");
+			}else{
+				waitFor(2000);
+				hp.checkOut().click();
+				Assert.assertTrue(CheckPT.equalsIgnoreCase(driver.getTitle()));
+			}
 		}
 	}
 

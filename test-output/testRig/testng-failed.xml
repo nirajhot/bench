@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [testRig]">
-  <test thread-count="5" name="testRig App(failed)">
+<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [testRig]" parallel="tests">
+  <test thread-count="3" name="T3(failed)" parallel="tests">
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="testCase.orderMultipleItemsWithRegUser">
+        <methods>
+          <include name="checkOut"/>
+          <include name="successMsg"/>
+          <include name="browserSetUp"/>
+          <include name="payment"/>
+          <include name="getData"/>
+          <include name="quitBrowser"/>
+          <include name="searchProduct"/>
+          <include name="userLogin"/>
+        </methods>
+      </class> <!-- testCase.orderMultipleItemsWithRegUser -->
+    </classes>
+  </test> <!-- T3(failed) -->
+  <test thread-count="3" name="T2(failed)" parallel="tests">
     <parameter name="browser" value="Chrome"/>
     <classes>
       <class name="testCase.orderWithGuestUser">
@@ -10,10 +27,24 @@
           <include name="successMsg"/>
           <include name="payment"/>
           <include name="browserSetUp"/>
-          <include name="processCheckOut" invocation-numbers="0"/>
+          <include name="processCheckOut"/>
           <include name="quitBrowser"/>
         </methods>
       </class> <!-- testCase.orderWithGuestUser -->
     </classes>
-  </test> <!-- testRig App(failed) -->
+  </test> <!-- T2(failed) -->
+  <test thread-count="3" name="T1(failed)" parallel="tests">
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="testCase.orderWithRegUser">
+        <methods>
+          <include name="payment"/>
+          <include name="successMsg"/>
+          <include name="browserSetUp"/>
+          <include name="quitBrowser"/>
+          <include name="processCheckOut" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- testCase.orderWithRegUser -->
+    </classes>
+  </test> <!-- T1(failed) -->
 </suite> <!-- Failed suite [testRig] -->

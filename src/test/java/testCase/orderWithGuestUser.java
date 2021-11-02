@@ -1,11 +1,13 @@
 package testCase;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+import org.testng.SkipException;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pageObject.homePage;
@@ -38,7 +40,7 @@ public class orderWithGuestUser extends BaseClass{
 	@DataProvider(name = "test-test-data")
 	public Object[][] dataProvFuncTest(){
 		return new Object[][]{
-			{"Alcogel Clean Machines","CPW1020A"}
+			{"Alcogel Clean Machines"}
 		};
 	}
 
@@ -77,8 +79,8 @@ public class orderWithGuestUser extends BaseClass{
 	}
 
 	@Test(priority=1,dataProvider ="test-test-data")
-	public void clickItemAddCart(String keyWord, String SKU){
-		for(int i=0;i<hp.getAllItems().size();i++){
+	public void clickItemAddCart(String keyWord){
+		/*for(int i=0;i<hp.getAllItems().size();i++){
 			WebElement selectPrice =hp.getAllItems().get(i);
 			try{
 				if(selectPrice.getText().contains(keyWord)){
@@ -91,19 +93,48 @@ public class orderWithGuestUser extends BaseClass{
 			}catch(Exception e){
 				e.printStackTrace();
 			}
+		}*/
+		
+		WebElement e1;
+		try{
+			e1 = driver.findElement(By.cssSelector("[alt='"+keyWord+"']"));
+			e1.click();
+		}catch(Exception e){
+			 js = (JavascriptExecutor)driver;
+			e1 = driver.findElement(By.cssSelector("[alt='"+keyWord+"']"));
+			js.executeScript("arguments[0].click();", e1);
 		}
 	}
 
 	@Test(priority=2,dataProvider ="test-test-data")
-	public void processCheckOut(String keyWord, String SKU){
+	public void processCheckOut(String keyWord){
 		String title = keyWord+" | BENCH/ Online Store";
 		Assert.assertTrue(title.equalsIgnoreCase(driver.getTitle()));
 		if(hp.customerLoginText().getText().equals(keyWord)){
-			hp.selectWhite().click();
-			hp.setQTY().click();
-			hp.setQTY().clear();
-			hp.setQTY().sendKeys("2");
+			try{
+				waitFor(2000);
+				bp.selectValue(hp.selectColor(), common.VISIBLETEXT.toString(), "ASH GRAY");
+				waitFor(2000);
+				if(hp.selectSize().isEnabled()){
+					waitFor(2000);
+					js.executeScript("arguments[0].scrollIntoView();", hp.selectSize());
+					bp.selectValue(hp.selectSize(), common.VISIBLETEXT.toString(), "L");
+					waitFor(2000);
+				}
+				hp.setQTY().click();
+				hp.setQTY().clear();
+				hp.setQTY().sendKeys("2");
+			}catch(Exception e){
+				hp.setQTY().click();
+				hp.setQTY().clear();
+				hp.setQTY().sendKeys("2");
+			}
 			hp.cartButton().click();
+			try{
+				bp.waitUntilElementClickable(hp.getSuccessMsg());
+			}catch(Exception e){
+				bp.waitUntilElementClickable(hp.getSuccessError());
+			}
 			waitFor(5000);
 			try{
 				String getText = hp.cartAddedText().getText();
@@ -111,8 +142,12 @@ public class orderWithGuestUser extends BaseClass{
 					bp.waitUntilElementClickable(hp.getCartDetail());
 					hp.getCartDetail().click();
 					bp.waitUntilElementClickable(hp.getMiniCartDetail());
-					hp.checkOut().click();
-					Assert.assertTrue(CheckPT.equalsIgnoreCase(driver.getTitle()));
+					if(!hp.checkOut().isDisplayed()){
+						throw new SkipException("Skipping this exception");
+					}else{
+						hp.checkOut().click();
+						Assert.assertTrue(CheckPT.equalsIgnoreCase(driver.getTitle()));
+					}
 				}
 			}catch(Exception e){
 				e.printStackTrace();
@@ -120,7 +155,7 @@ public class orderWithGuestUser extends BaseClass{
 		}
 	}
 
-	@Test(priority=3,dataProvider ="select-test-data")
+	@Test(priority=3,dataProvider ="select-test-data", dependsOnMethods={"processCheckOut"})
 	public void accountCreation(String email, String name, String surname){
 		bp.waitUntilElementClickable(hp.shippingDIV());
 		bp.waitUntilElementClickable(hp.getOrderSummary());

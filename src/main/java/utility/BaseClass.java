@@ -11,6 +11,7 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -31,7 +32,7 @@ public class BaseClass extends Initializer{
 	private static Config rc = new Config();
 	private static String URL = rc.getURL();
 	protected static final Logger logger = LogManager.getLogger(BaseClass.class.getName());
-
+	protected JavascriptExecutor js;
 	@SuppressWarnings("static-access")
 	@Parameters({"browser"})
 	@BeforeClass
