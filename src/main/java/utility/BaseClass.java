@@ -3,9 +3,7 @@ package utility;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.util.Collections;
 import java.util.Date;
-
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -16,13 +14,11 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass extends Initializer{
@@ -33,6 +29,7 @@ public class BaseClass extends Initializer{
 	private static String URL = rc.getURL();
 	protected static final Logger logger = LogManager.getLogger(BaseClass.class.getName());
 	protected JavascriptExecutor js;
+	
 	@SuppressWarnings("static-access")
 	@Parameters({"browser"})
 	@BeforeClass
@@ -41,9 +38,11 @@ public class BaseClass extends Initializer{
 		DOMConfigurator.configure("log4j.xml");
 		if(browser.equalsIgnoreCase("Chrome")){
 			manager.chromedriver().setup();
+			logger.info("Launching "+browser+" browser");
 			driver = new ChromeDriver();
 		}else if(browser.equalsIgnoreCase("firefox")){
 			manager.firefoxdriver().setup();
+			logger.info("Launching "+browser+" browser");
 			driver = new FirefoxDriver();
 		}
 		logger.info(browser+" browser started");
@@ -52,7 +51,9 @@ public class BaseClass extends Initializer{
 		logger.info("Application launched");
 		waitFor(2000);
 		if(driver.findElement(By.cssSelector(".action-close")).isDisplayed()){
+			logger.info("Clicking close icon");
 			driver.findElement(By.cssSelector(".action-close")).click();
+			logger.info("Clicked close icon");
 		}else{
 			waitFor(2000);
 		}
@@ -76,19 +77,4 @@ public class BaseClass extends Initializer{
 			e.printStackTrace();
 		}
 	}
-	
-	/*@AfterSuite
-	public void deleteFolder(){
-		File  checkFile=new File(System.getProperty("user.dir")+"/Screenshot");
-		if(checkFile.exists()){
-			try {
-				FileUtils.copyDirectory(checkFile, new File(System.getProperty("user.dir")+"/ScreenshotBackup"));
-				FileUtils.deleteDirectory(checkFile);
-				checkFile.mkdir();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-			
-		}	
-	}*/
 }

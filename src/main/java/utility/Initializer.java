@@ -8,6 +8,7 @@ public abstract class Initializer {
 	
 	public void waitFor(int ms){
 		try {
+			ms=ms*2;
 			BaseClass.logger.info("Waiting for element with wait of "+ ms + " ms" );
 			Thread.sleep(ms);
 		} catch (InterruptedException e) {

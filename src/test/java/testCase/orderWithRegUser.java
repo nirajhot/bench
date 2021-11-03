@@ -75,9 +75,6 @@ public class orderWithRegUser extends BaseClass{
 			waitFor(4000);
 			hp.searchTextBar().sendKeys(Keys.ENTER);
 		}
-		/*bp.mouseHover(hp.getFirst());
-		a1.moveToElement(hp.getFirst()).build().perform();
-		hp.getFirst().click();*/
 		bp.waitUntilElementClickable(hp.productGridWrapper());
 	}
 

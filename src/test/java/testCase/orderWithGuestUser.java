@@ -71,30 +71,11 @@ public class orderWithGuestUser extends BaseClass{
 			waitFor(4000);
 			hp.searchTextBar().sendKeys(Keys.ENTER);
 		}
-		/*hp.searchTextBar().sendKeys(keyWord);
-		waitFor(4000);
-		a1.moveToElement(hp.getFirst()).build().perform();
-		hp.getFirst().click();*/
 		bp.waitUntilElementClickable(hp.productGridWrapper());
 	}
 
 	@Test(priority=1,dataProvider ="test-test-data")
 	public void clickItemAddCart(String keyWord){
-		/*for(int i=0;i<hp.getAllItems().size();i++){
-			WebElement selectPrice =hp.getAllItems().get(i);
-			try{
-				if(selectPrice.getText().contains(keyWord)){
-					a1.moveToElement(driver.findElement(By.cssSelector("[alt='"+keyWord+"']")))
-					.build().perform();
-					waitFor(2000);
-					driver.findElement(By.cssSelector("[data-product-sku='"+SKU+"']"+" .tocart.primary")).click();;
-					bp.waitUntilElementClickable(hp.getMagnifier());
-				}
-			}catch(Exception e){
-				e.printStackTrace();
-			}
-		}*/
-		
 		WebElement e1;
 		try{
 			e1 = driver.findElement(By.cssSelector("[alt='"+keyWord+"']"));
