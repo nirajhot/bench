@@ -151,6 +151,13 @@ public class homePage extends BasePage{
 	@FindBy(id="shipping")
 	private WebElement shippingDiv;
 	
+	@FindBy(css=".columns")
+	private WebElement customerLoginArea;
+	
+	public WebElement getCustomerLoginArea() {
+		return customerLoginArea;
+	}
+	
 	public List<WebElement> getAllItems() {
 		return allItems;
 	}

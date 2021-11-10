@@ -47,21 +47,25 @@ public class orderWithRegUser extends BaseClass{
 		hp=  new homePage(driver);
 		bp = new BasePage(driver);
 		a1= new Actions(driver);
+		takeScreen(this.getClass().getSimpleName());
 		Assert.assertTrue(LPT.equalsIgnoreCase(driver.getTitle()));
 		bp.waitUntilElementClickable(hp.banner());
 		hp.welcomeIcon().click();
 		bp.waitUntilElementClickable(hp.getHeaderLinks());
 		bp.mouseHover(hp.signIn());
 		hp.signIn().click();
+		bp.waitUntilElementClickable(hp.getCustomerLoginArea());
 		Assert.assertTrue(CPT.equalsIgnoreCase(driver.getTitle()));
 		hp.emailText().sendKeys(EMAIL);
 		hp.passText().sendKeys(PASS);
+		takeScreen(this.getClass().getSimpleName());
 		hp.signButton().click();
 		bp.waitUntilElementClickable(hp.banner());
 	}
 
 	@Test(priority=1,dataProvider ="test-data")
 	public void searchProduct(String keyWord){
+		takeScreen(this.getClass().getSimpleName());
 		try {
 			hp.searchTextBar().clear();
 			hp.searchTextBar().sendKeys(keyWord);
@@ -76,6 +80,7 @@ public class orderWithRegUser extends BaseClass{
 			hp.searchTextBar().sendKeys(Keys.ENTER);
 		}
 		bp.waitUntilElementClickable(hp.productGridWrapper());
+		takeScreen(this.getClass().getSimpleName());
 	}
 
 	@Test(priority=2,dataProvider ="select-test-data")
@@ -89,6 +94,7 @@ public class orderWithRegUser extends BaseClass{
 			e1 = driver.findElement(By.cssSelector("[alt='"+keyWord+"']"));
 			js.executeScript("arguments[0].click();", e1);
 		}
+		takeScreen(this.getClass().getSimpleName());
 	}
 
 	@Test(priority=3,dataProvider ="select-test-data")
@@ -114,7 +120,9 @@ public class orderWithRegUser extends BaseClass{
 				hp.setQTY().clear();
 				hp.setQTY().sendKeys("1");
 			}
+			takeScreen(this.getClass().getSimpleName());
 			hp.cartButton().click();
+			takeScreen(this.getClass().getSimpleName());
 			try{
 				bp.waitUntilElementClickable(hp.getSuccessMsg());
 			}catch(Exception e){
@@ -122,6 +130,7 @@ public class orderWithRegUser extends BaseClass{
 			}
 			bp.waitUntilElementClickable(hp.getCartDetail());
 			hp.getCartDetail().click();
+			takeScreen(this.getClass().getSimpleName());
 			bp.waitUntilElementClickable(hp.getMiniCartDetail());
 			if(!hp.checkOut().isDisplayed()){
 				throw new SkipException("Skipping this exception");
@@ -130,6 +139,7 @@ public class orderWithRegUser extends BaseClass{
 				hp.checkOut().click();
 				Assert.assertTrue(CheckPT.equalsIgnoreCase(driver.getTitle()));
 			}
+			takeScreen(this.getClass().getSimpleName());
 		}
 	}
 
@@ -149,6 +159,7 @@ public class orderWithRegUser extends BaseClass{
 		hp.ZIP().sendKeys("12345");
 		hp.CONTACT().click();
 		hp.CONTACT().sendKeys("3210456987");
+		takeScreen(this.getClass().getSimpleName());
 		hp.getUpdate().click();
 		boolean status = hp.placeOrder().isEnabled();
 		if(status){

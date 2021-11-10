@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="5" failed="6" ignored="0" total="17" passed="6">
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="testRig" duration-ms="1210550" started-at="2021-11-02T18:46:21Z" finished-at="2021-11-02T19:06:32Z">
+  <suite name="Bench" duration-ms="462949" started-at="2021-11-10T17:41:13Z" finished-at="2021-11-10T17:48:56Z">
     <groups>
     </groups>
-    <test name="T3" duration-ms="306406" started-at="2021-11-02T18:46:21Z" finished-at="2021-11-02T18:51:27Z">
-      <class name="testCase.orderMultipleItemsWithRegUser">
-        <test-method status="PASS" signature="getData()[pri:0, instance:testCase.orderMultipleItemsWithRegUser@eec5a4a]" name="getData" is-config="true" duration-ms="979" started-at="2021-11-02T18:46:21Z" finished-at="2021-11-02T18:46:22Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getData -->
-        <test-method status="FAIL" signature="browserSetUp(java.lang.String)[pri:0, instance:testCase.orderMultipleItemsWithRegUser@eec5a4a]" name="browserSetUp" is-config="true" duration-ms="305037" started-at="2021-11-02T18:46:22Z" finished-at="2021-11-02T18:51:27Z">
+    <test name="Bench TC" duration-ms="135332" started-at="2021-11-10T17:41:13Z" finished-at="2021-11-10T17:43:28Z">
+      <class name="loginTC.validCredentials">
+        <test-method status="PASS" signature="browserSetUp(java.lang.String)[pri:0, instance:loginTC.validCredentials@2d928643]" name="browserSetUp" is-config="true" duration-ms="62395" started-at="2021-11-10T17:41:13Z" finished-at="2021-11-10T17:42:15Z">
           <params>
             <param index="0">
               <value>
@@ -19,539 +15,26 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[timeout: Timed out receiving message from renderer: 294.083
-  (Session info: chrome=95.0.4638.54)
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'DESKTOP-HR8D3KK', ip: '192.168.43.175', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_111'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 95.0.4638.54, chrome: {chromedriverVersion: 95.0.4638.54 (d31a821ec901f..., userDataDir: C:\Users\Udeep\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50141}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 761bf8aa70b4f6267ce19d5e2ad0d7c5]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 294.083
-  (Session info: chrome=95.0.4638.54)
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'DESKTOP-HR8D3KK', ip: '192.168.43.175', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_111'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 95.0.4638.54, chrome: {chromedriverVersion: 95.0.4638.54 (d31a821ec901f..., userDataDir: C:\Users\Udeep\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50141}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 761bf8aa70b4f6267ce19d5e2ad0d7c5
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:276)
-at utility.BaseClass.browserSetUp(BaseClass.java:51)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
-at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
-at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
-at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
-at java.util.concurrent.FutureTask.run(Unknown Source)
-at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-at java.lang.Thread.run(Unknown Source)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserSetUp -->
-        <test-method status="SKIP" signature="userLogin()[pri:0, instance:testCase.orderMultipleItemsWithRegUser@eec5a4a]" name="userLogin" duration-ms="0" started-at="2021-11-02T18:51:27Z" finished-at="2021-11-02T18:51:27Z">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[timeout: Timed out receiving message from renderer: 294.083
-  (Session info: chrome=95.0.4638.54)
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'DESKTOP-HR8D3KK', ip: '192.168.43.175', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_111'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 95.0.4638.54, chrome: {chromedriverVersion: 95.0.4638.54 (d31a821ec901f..., userDataDir: C:\Users\Udeep\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50141}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 761bf8aa70b4f6267ce19d5e2ad0d7c5]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 294.083
-  (Session info: chrome=95.0.4638.54)
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'DESKTOP-HR8D3KK', ip: '192.168.43.175', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_111'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 95.0.4638.54, chrome: {chromedriverVersion: 95.0.4638.54 (d31a821ec901f..., userDataDir: C:\Users\Udeep\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50141}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 761bf8aa70b4f6267ce19d5e2ad0d7c5
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:276)
-at utility.BaseClass.browserSetUp(BaseClass.java:51)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
-at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
-at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
-at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
-at java.util.concurrent.FutureTask.run(Unknown Source)
-at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-at java.lang.Thread.run(Unknown Source)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        <test-method status="PASS" signature="userLogin()[pri:0, instance:loginTC.validCredentials@2d928643]" name="userLogin" duration-ms="72771" started-at="2021-11-10T17:42:15Z" finished-at="2021-11-10T17:43:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- userLogin -->
-        <test-method status="SKIP" signature="searchProduct()[pri:1, instance:testCase.orderMultipleItemsWithRegUser@eec5a4a]" name="searchProduct" duration-ms="0" started-at="2021-11-02T18:51:27Z" finished-at="2021-11-02T18:51:27Z">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[timeout: Timed out receiving message from renderer: 294.083
-  (Session info: chrome=95.0.4638.54)
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'DESKTOP-HR8D3KK', ip: '192.168.43.175', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_111'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 95.0.4638.54, chrome: {chromedriverVersion: 95.0.4638.54 (d31a821ec901f..., userDataDir: C:\Users\Udeep\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50141}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 761bf8aa70b4f6267ce19d5e2ad0d7c5]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 294.083
-  (Session info: chrome=95.0.4638.54)
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'DESKTOP-HR8D3KK', ip: '192.168.43.175', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_111'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 95.0.4638.54, chrome: {chromedriverVersion: 95.0.4638.54 (d31a821ec901f..., userDataDir: C:\Users\Udeep\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50141}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 761bf8aa70b4f6267ce19d5e2ad0d7c5
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:276)
-at utility.BaseClass.browserSetUp(BaseClass.java:51)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
-at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
-at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
-at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
-at java.util.concurrent.FutureTask.run(Unknown Source)
-at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-at java.lang.Thread.run(Unknown Source)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchProduct -->
-        <test-method status="SKIP" signature="checkOut()[pri:2, instance:testCase.orderMultipleItemsWithRegUser@eec5a4a]" name="checkOut" duration-ms="0" started-at="2021-11-02T18:51:27Z" finished-at="2021-11-02T18:51:27Z">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[timeout: Timed out receiving message from renderer: 294.083
-  (Session info: chrome=95.0.4638.54)
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'DESKTOP-HR8D3KK', ip: '192.168.43.175', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_111'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 95.0.4638.54, chrome: {chromedriverVersion: 95.0.4638.54 (d31a821ec901f..., userDataDir: C:\Users\Udeep\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50141}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 761bf8aa70b4f6267ce19d5e2ad0d7c5]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 294.083
-  (Session info: chrome=95.0.4638.54)
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'DESKTOP-HR8D3KK', ip: '192.168.43.175', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_111'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 95.0.4638.54, chrome: {chromedriverVersion: 95.0.4638.54 (d31a821ec901f..., userDataDir: C:\Users\Udeep\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50141}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 761bf8aa70b4f6267ce19d5e2ad0d7c5
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:276)
-at utility.BaseClass.browserSetUp(BaseClass.java:51)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
-at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
-at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
-at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
-at java.util.concurrent.FutureTask.run(Unknown Source)
-at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-at java.lang.Thread.run(Unknown Source)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkOut -->
-        <test-method status="SKIP" signature="payment()[pri:3, instance:testCase.orderMultipleItemsWithRegUser@eec5a4a]" name="payment" duration-ms="0" started-at="2021-11-02T18:51:27Z" depends-on-methods="testCase.orderMultipleItemsWithRegUser.checkOut" finished-at="2021-11-02T18:51:27Z">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method orderMultipleItemsWithRegUser.payment()[pri:3, instance:testCase.orderMultipleItemsWithRegUser@eec5a4a] depends on not successfully finished methods]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method orderMultipleItemsWithRegUser.payment()[pri:3, instance:testCase.orderMultipleItemsWithRegUser@eec5a4a] depends on not successfully finished methods
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
-at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
-at java.util.concurrent.FutureTask.run(Unknown Source)
-at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-at java.lang.Thread.run(Unknown Source)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- payment -->
-        <test-method status="SKIP" signature="successMsg()[pri:4, instance:testCase.orderMultipleItemsWithRegUser@eec5a4a]" name="successMsg" duration-ms="0" started-at="2021-11-02T18:51:27Z" depends-on-methods="testCase.orderMultipleItemsWithRegUser.payment" finished-at="2021-11-02T18:51:27Z">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method orderMultipleItemsWithRegUser.successMsg()[pri:4, instance:testCase.orderMultipleItemsWithRegUser@eec5a4a] depends on not successfully finished methods]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method orderMultipleItemsWithRegUser.successMsg()[pri:4, instance:testCase.orderMultipleItemsWithRegUser@eec5a4a] depends on not successfully finished methods
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
-at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
-at java.util.concurrent.FutureTask.run(Unknown Source)
-at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-at java.lang.Thread.run(Unknown Source)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- successMsg -->
-        <test-method status="SKIP" signature="quitBrowser()[pri:0, instance:testCase.orderMultipleItemsWithRegUser@eec5a4a]" name="quitBrowser" is-config="true" duration-ms="0" started-at="2021-11-02T18:51:27Z" finished-at="2021-11-02T18:51:27Z">
+        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:loginTC.validCredentials@2d928643]" name="quitBrowser" is-config="true" duration-ms="135" started-at="2021-11-10T17:43:28Z" finished-at="2021-11-10T17:43:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitBrowser -->
-      </class> <!-- testCase.orderMultipleItemsWithRegUser -->
-    </test> <!-- T3 -->
-    <test name="T2" duration-ms="1102259" started-at="2021-11-02T18:46:21Z" finished-at="2021-11-02T19:04:43Z">
-      <class name="testCase.orderWithGuestUser">
-        <test-method status="PASS" signature="browserSetUp(java.lang.String)[pri:0, instance:testCase.orderWithGuestUser@6b09bb57]" name="browserSetUp" is-config="true" duration-ms="220024" started-at="2021-11-02T18:46:21Z" finished-at="2021-11-02T18:50:01Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserSetUp -->
-        <test-method status="PASS" signature="searchProduct(java.lang.String)[pri:0, instance:testCase.orderWithGuestUser@6b09bb57]" name="searchProduct" duration-ms="224143" started-at="2021-11-02T18:50:01Z" data-provider="test-data" finished-at="2021-11-02T18:53:45Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[glasses]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchProduct -->
-        <test-method status="PASS" signature="clickItemAddCart(java.lang.String)[pri:1, instance:testCase.orderWithGuestUser@6b09bb57]" name="clickItemAddCart" duration-ms="39655" started-at="2021-11-02T18:53:45Z" data-provider="test-test-data" finished-at="2021-11-02T18:54:25Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Alcogel Clean Machines]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickItemAddCart -->
-        <test-method status="PASS" signature="processCheckOut(java.lang.String)[pri:2, instance:testCase.orderWithGuestUser@6b09bb57]" name="processCheckOut" duration-ms="24983" started-at="2021-11-02T18:54:25Z" data-provider="test-test-data" finished-at="2021-11-02T18:54:50Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Alcogel Clean Machines]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- processCheckOut -->
-        <test-method status="FAIL" signature="accountCreation(java.lang.String, java.lang.String, java.lang.String)[pri:3, instance:testCase.orderWithGuestUser@6b09bb57]" name="accountCreation" duration-ms="291789" started-at="2021-11-02T18:54:50Z" data-provider="select-test-data" depends-on-methods="testCase.orderWithGuestUser.processCheckOut" finished-at="2021-11-02T18:59:42Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[bovecay785@datakop.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Manoj]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Sharma]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.ElementNotInteractableException">
-            <message>
-              <![CDATA[element not interactable
-  (Session info: chrome=95.0.4638.54)
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'DESKTOP-HR8D3KK', ip: '192.168.43.175', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_111'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 95.0.4638.54, chrome: {chromedriverVersion: 95.0.4638.54 (d31a821ec901f..., userDataDir: C:\Users\Udeep\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50154}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 35d128e4a8c715ad4ef3f838924328f3]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=95.0.4638.54)
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'DESKTOP-HR8D3KK', ip: '192.168.43.175', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_111'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 95.0.4638.54, chrome: {chromedriverVersion: 95.0.4638.54 (d31a821ec901f..., userDataDir: C:\Users\Udeep\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50154}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 35d128e4a8c715ad4ef3f838924328f3
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at com.sun.proxy.$Proxy13.click(Unknown Source)
-at testCase.orderWithGuestUser.accountCreation(orderWithGuestUser.java:163)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
-at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
-at java.util.concurrent.FutureTask.run(Unknown Source)
-at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-at java.lang.Thread.run(Unknown Source)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- accountCreation -->
-        <test-method status="FAIL" signature="payment()[pri:4, instance:testCase.orderWithGuestUser@6b09bb57]" name="payment" duration-ms="300510" started-at="2021-11-02T18:59:42Z" finished-at="2021-11-02T19:04:42Z">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.cssSelector: .payment-group' (tried for 300 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.cssSelector: .payment-group' (tried for 300 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:113)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:283)
-at utility.BasePage.waitUntilElementClickable(BasePage.java:29)
-at testCase.orderWithGuestUser.payment(orderWithGuestUser.java:185)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
-at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
-at java.util.concurrent.FutureTask.run(Unknown Source)
-at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-at java.lang.Thread.run(Unknown Source)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".payment-group"}
-  (Session info: chrome=95.0.4638.54)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'DESKTOP-HR8D3KK', ip: '192.168.43.175', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_111'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 95.0.4638.54, chrome: {chromedriverVersion: 95.0.4638.54 (d31a821ec901f..., userDataDir: C:\Users\Udeep\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50154}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 35d128e4a8c715ad4ef3f838924328f3
-*** Element info: {Using=css selector, value=.payment-group}
-at sun.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:416)
-at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at com.sun.proxy.$Proxy13.isDisplayed(Unknown Source)
-at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:315)
-at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:44)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:301)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:298)
-at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:686)
-at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:682)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:260)
-... 22 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- payment -->
-        <test-method status="FAIL" signature="successMsg()[pri:5, instance:testCase.orderWithGuestUser@6b09bb57]" name="successMsg" duration-ms="74" started-at="2021-11-02T19:04:42Z" finished-at="2021-11-02T19:04:43Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertTrue(Assert.java:44)
-at org.testng.Assert.assertTrue(Assert.java:54)
-at testCase.orderWithGuestUser.successMsg(orderWithGuestUser.java:208)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
-at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
-at java.util.concurrent.FutureTask.run(Unknown Source)
-at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-at java.lang.Thread.run(Unknown Source)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- successMsg -->
-        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:testCase.orderWithGuestUser@6b09bb57]" name="quitBrowser" is-config="true" duration-ms="818" started-at="2021-11-02T19:04:43Z" finished-at="2021-11-02T19:04:43Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quitBrowser -->
-      </class> <!-- testCase.orderWithGuestUser -->
-    </test> <!-- T2 -->
-    <test name="T1" duration-ms="1210550" started-at="2021-11-02T18:46:21Z" finished-at="2021-11-02T19:06:32Z">
+      </class> <!-- loginTC.validCredentials -->
+    </test> <!-- Bench TC -->
+    <test name="Order With Reg User" duration-ms="327584" started-at="2021-11-10T17:43:28Z" finished-at="2021-11-10T17:48:56Z">
       <class name="testCase.orderWithRegUser">
-        <test-method status="PASS" signature="browserSetUp(java.lang.String)[pri:0, instance:testCase.orderWithRegUser@64bfbc86]" name="browserSetUp" is-config="true" duration-ms="256379" started-at="2021-11-02T18:46:21Z" finished-at="2021-11-02T18:50:37Z">
+        <test-method status="PASS" signature="createFolder()[pri:0, instance:testCase.orderWithRegUser@520a3426]" name="createFolder" is-config="true" duration-ms="17" started-at="2021-11-10T17:41:13Z" finished-at="2021-11-10T17:41:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createFolder -->
+        <test-method status="PASS" signature="browserSetUp(java.lang.String)[pri:0, instance:testCase.orderWithRegUser@520a3426]" name="browserSetUp" is-config="true" duration-ms="62479" started-at="2021-11-10T17:43:28Z" finished-at="2021-11-10T17:44:31Z">
           <params>
             <param index="0">
               <value>
@@ -562,11 +45,11 @@ at java.lang.Thread.run(Unknown Source)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserSetUp -->
-        <test-method status="PASS" signature="userLogin()[pri:0, instance:testCase.orderWithRegUser@64bfbc86]" name="userLogin" duration-ms="227163" started-at="2021-11-02T18:50:37Z" finished-at="2021-11-02T18:54:25Z">
+        <test-method status="PASS" signature="userLogin()[pri:0, instance:testCase.orderWithRegUser@520a3426]" name="userLogin" duration-ms="58828" started-at="2021-11-10T17:44:31Z" finished-at="2021-11-10T17:45:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- userLogin -->
-        <test-method status="PASS" signature="searchProduct(java.lang.String)[pri:1, instance:testCase.orderWithRegUser@64bfbc86]" name="searchProduct" duration-ms="28013" started-at="2021-11-02T18:54:25Z" data-provider="test-data" finished-at="2021-11-02T18:54:53Z">
+        <test-method status="PASS" signature="searchProduct(java.lang.String)[pri:1, instance:testCase.orderWithRegUser@520a3426]" name="searchProduct" duration-ms="22803" started-at="2021-11-10T17:45:30Z" data-provider="test-data" finished-at="2021-11-10T17:45:52Z">
           <params>
             <param index="0">
               <value>
@@ -577,7 +60,7 @@ at java.lang.Thread.run(Unknown Source)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchProduct -->
-        <test-method status="PASS" signature="clickItemAddCart(java.lang.String)[pri:2, instance:testCase.orderWithRegUser@64bfbc86]" name="clickItemAddCart" duration-ms="74223" started-at="2021-11-02T18:54:53Z" data-provider="select-test-data" finished-at="2021-11-02T18:56:07Z">
+        <test-method status="PASS" signature="clickItemAddCart(java.lang.String)[pri:2, instance:testCase.orderWithRegUser@520a3426]" name="clickItemAddCart" duration-ms="17474" started-at="2021-11-10T17:45:52Z" data-provider="select-test-data" finished-at="2021-11-10T17:46:10Z">
           <params>
             <param index="0">
               <value>
@@ -588,7 +71,7 @@ at java.lang.Thread.run(Unknown Source)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickItemAddCart -->
-        <test-method status="FAIL" signature="processCheckOut(java.lang.String)[pri:3, instance:testCase.orderWithRegUser@64bfbc86]" name="processCheckOut" duration-ms="323461" started-at="2021-11-02T18:56:07Z" data-provider="select-test-data" finished-at="2021-11-02T19:01:30Z">
+        <test-method status="PASS" signature="processCheckOut(java.lang.String)[pri:3, instance:testCase.orderWithRegUser@520a3426]" name="processCheckOut" duration-ms="165663" started-at="2021-11-10T17:46:10Z" data-provider="select-test-data" finished-at="2021-11-10T17:48:56Z">
           <params>
             <param index="0">
               <value>
@@ -596,182 +79,18 @@ at java.lang.Thread.run(Unknown Source)
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[timeout: Timed out receiving message from renderer: 300.000
-  (Session info: chrome=95.0.4638.54)
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'DESKTOP-HR8D3KK', ip: '192.168.43.175', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_111'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 95.0.4638.54, chrome: {chromedriverVersion: 95.0.4638.54 (d31a821ec901f..., userDataDir: C:\Users\Udeep\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50140}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 215a2ea608669a0ac97527329cb1f2b1]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 300.000
-  (Session info: chrome=95.0.4638.54)
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'DESKTOP-HR8D3KK', ip: '192.168.43.175', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_111'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 95.0.4638.54, chrome: {chromedriverVersion: 95.0.4638.54 (d31a821ec901f..., userDataDir: C:\Users\Udeep\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50140}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 215a2ea608669a0ac97527329cb1f2b1
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at com.sun.proxy.$Proxy13.click(Unknown Source)
-at testCase.orderWithRegUser.processCheckOut(orderWithRegUser.java:133)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
-at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
-at java.util.concurrent.FutureTask.run(Unknown Source)
-at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-at java.lang.Thread.run(Unknown Source)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- processCheckOut -->
-        <test-method status="FAIL" signature="payment()[pri:4, instance:testCase.orderWithRegUser@64bfbc86]" name="payment" duration-ms="300391" started-at="2021-11-02T19:01:30Z" finished-at="2021-11-02T19:06:31Z">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.cssSelector: .payment-group' (tried for 300 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.cssSelector: .payment-group' (tried for 300 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:113)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:283)
-at utility.BasePage.waitUntilElementClickable(BasePage.java:29)
-at testCase.orderWithRegUser.payment(orderWithRegUser.java:141)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
-at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
-at java.util.concurrent.FutureTask.run(Unknown Source)
-at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-at java.lang.Thread.run(Unknown Source)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".payment-group"}
-  (Session info: chrome=95.0.4638.54)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'DESKTOP-HR8D3KK', ip: '192.168.43.175', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_111'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 95.0.4638.54, chrome: {chromedriverVersion: 95.0.4638.54 (d31a821ec901f..., userDataDir: C:\Users\Udeep\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50140}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 215a2ea608669a0ac97527329cb1f2b1
-*** Element info: {Using=css selector, value=.payment-group}
-at sun.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:416)
-at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at com.sun.proxy.$Proxy13.isDisplayed(Unknown Source)
-at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:315)
-at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:44)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:301)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:298)
-at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:686)
-at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:682)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:260)
-... 22 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- payment -->
-        <test-method status="FAIL" signature="successMsg()[pri:5, instance:testCase.orderWithRegUser@64bfbc86]" name="successMsg" duration-ms="169" started-at="2021-11-02T19:06:31Z" finished-at="2021-11-02T19:06:31Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertTrue(Assert.java:44)
-at org.testng.Assert.assertTrue(Assert.java:54)
-at testCase.orderWithRegUser.successMsg(orderWithRegUser.java:164)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
-at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
-at java.util.concurrent.FutureTask.run(Unknown Source)
-at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-at java.lang.Thread.run(Unknown Source)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- successMsg -->
-        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:testCase.orderWithRegUser@64bfbc86]" name="quitBrowser" is-config="true" duration-ms="715" started-at="2021-11-02T19:06:31Z" finished-at="2021-11-02T19:06:32Z">
+        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:testCase.orderWithRegUser@520a3426]" name="quitBrowser" is-config="true" duration-ms="318" started-at="2021-11-10T17:48:56Z" finished-at="2021-11-10T17:48:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitBrowser -->
+        <test-method status="PASS" signature="copyToBackUp()[pri:0, instance:testCase.orderWithRegUser@520a3426]" name="copyToBackUp" is-config="true" duration-ms="2" started-at="2021-11-10T17:48:56Z" finished-at="2021-11-10T17:48:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- copyToBackUp -->
       </class> <!-- testCase.orderWithRegUser -->
-    </test> <!-- T1 -->
-  </suite> <!-- testRig -->
+    </test> <!-- Order With Reg User -->
+  </suite> <!-- Bench -->
 </testng-results>

@@ -1,28 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="testRig" parallel="tests" thread-count="3">
-	<!--  listeners>
-		<listener class-name="RetryAnalyzer.MyAnnotationTransfer">
-		</listener>
-	</listeners-->
-	<test name="T1">
-		<parameter name="browser" value="Chrome" />
+<suite name="Bench">
+	<!-- listener class-name="RetryAnalyzer.MyAnnotationTransfer"> </listener> 
+		</listeners-->
+	<listeners>
+		<listener class-name="listeners.TestListener"></listener> 
+	</listeners >
+	<parameter name="browser" value="Chrome" />
+	<test name="Bench TC">
+		<classes>
+			<class name="loginTC.validCredentials" />
+		</classes>
+	</test>
+
+	<test name="Order With Reg User">
 		<classes>
 			<class name="testCase.orderWithRegUser" />
 		</classes>
 	</test>
-	
-	<test name="T2">
-		<parameter name="browser" value="Chrome" />
+
+	<!--  test name="Order With Guest User">
 		<classes>
 			<class name="testCase.orderWithGuestUser" />
 		</classes>
 	</test>
-	
-	<test name="T3">
-		<parameter name="browser" value="Chrome" />
+
+	<test name="Order Multiple Items With Reg User">
 		<classes>
 			<class name="testCase.orderMultipleItemsWithRegUser" />
 		</classes>
-	</test>
+	</test-->
 </suite>

@@ -46,6 +46,7 @@ public class orderMultipleItemsWithRegUser extends BaseClass{
 		bp.waitUntilElementClickable(hp.getHeaderLinks());
 		bp.mouseHover(hp.signIn());
 		hp.signIn().click();
+		bp.waitUntilElementClickable(hp.getCustomerLoginArea());
 		Assert.assertTrue(CPT.equalsIgnoreCase(driver.getTitle()));
 		hp.emailText().sendKeys(EMAIL);
 		hp.passText().sendKeys(PASS);

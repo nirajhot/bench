@@ -1,16 +1,9 @@
-2021-11-03 00:16:26  [utility.BaseClass] (TestNG-tests-1:) Chrome browser started
-2021-11-03 00:16:26  [utility.BaseClass] (TestNG-tests-3:) Chrome browser started
-2021-11-03 00:16:27  [utility.BaseClass] (TestNG-tests-2:) Chrome browser started
-2021-11-03 00:19:58  [utility.BaseClass] (TestNG-tests-2:) Application launched
-2021-11-03 00:19:58  [utility.BaseClass] (TestNG-tests-2:) Waiting for element with wait of 2000 ms
-2021-11-03 00:20:04  [utility.BaseClass] (TestNG-tests-2:) Waiting for element with wait of 4000 ms
-2021-11-03 00:20:35  [utility.BaseClass] (TestNG-tests-1:) Application launched
-2021-11-03 00:20:35  [utility.BaseClass] (TestNG-tests-1:) Waiting for element with wait of 2000 ms
-2021-11-03 00:24:25  [utility.BaseClass] (TestNG-tests-2:) Waiting for element with wait of 2000 ms
-2021-11-03 00:24:25  [utility.BaseClass] (TestNG-tests-1:) Waiting for element with wait of 4000 ms
-2021-11-03 00:24:34  [utility.BaseClass] (TestNG-tests-2:) Waiting for element with wait of 5000 ms
-2021-11-03 00:26:07  [utility.BaseClass] (TestNG-tests-1:) Waiting for element with wait of 2000 ms
-2021-11-03 00:26:28  [utility.BaseClass] (TestNG-tests-1:) Waiting for element with wait of 2000 ms
-2021-11-03 00:29:37  [utility.BaseClass] (TestNG-tests-2:) Waiting for element with wait of 5000 ms
-2021-11-03 00:34:43  [utility.BaseClass] (TestNG-tests-2:) Closing the browser
-2021-11-03 00:36:31  [utility.BaseClass] (TestNG-tests-1:) Closing the browser
+2021-11-10 23:13:28  [utility.BaseClass] (main:) Launching Chrome browser
+2021-11-10 23:13:30  [utility.BaseClass] (main:) Chrome browser started
+2021-11-10 23:14:31  [utility.BaseClass] (main:) Application launched
+2021-11-10 23:14:31  [utility.BaseClass] (main:) Clicking close icon
+2021-11-10 23:14:31  [utility.BaseClass] (main:) Clicked close icon
+2021-11-10 23:15:30  [utility.BaseClass] (main:) Waiting for element with wait of 8000 ms
+2021-11-10 23:16:10  [utility.BaseClass] (main:) Waiting for element with wait of 4000 ms
+2021-11-10 23:16:19  [utility.BaseClass] (main:) Waiting for element with wait of 4000 ms
+2021-11-10 23:18:56  [utility.BaseClass] (main:) Closing the browser
